@@ -5,14 +5,16 @@ export default function MyForm() {
         <form onSubmit={(e)=>{e.preventDefault()}}>
             <label>Name</label>
             <input value={data.name}
-                onChange={(e) => setName({ name: e.target.value, email: data.email })}
+                onChange={(e) =>
+                    
+                    setName({...data,name:e.target.value})}
             />
             <label>
                 email
             </label>
             <input value={data.email}
-                onChange={(e) => setName({ email: e.target.value, name: data.name })}
-
+                onChange={(e) => 
+                    setName({...data ,email:e.target.value})}
             />
             <button>submi</button>
         </form>
